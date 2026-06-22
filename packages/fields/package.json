@@ -1,0 +1,31 @@
+{
+  "name": "@xui/fields",
+  "version": "0.0.1",
+  "description": "Field components for XUI",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn run -T father build",
+    "build:watch": "yarn run -T father dev",
+    "doctor": "yarn run -T father doctor"
+  },
+  "dependencies": {
+    "@xui/base": "workspace:*",
+    "@xui/types": "workspace:*"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@mui/material": "^5.14.16",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@xui/types",
+  "version": "0.0.1",
+  "description": "Shared TypeScript types for XUI",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn run -T father build",
+    "build:watch": "yarn run -T father dev",
+    "doctor": "yarn run -T father doctor"
+  },
+  "dependencies": {
+    "type-fest": "^5.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

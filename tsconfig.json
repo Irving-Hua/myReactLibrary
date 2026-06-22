@@ -8,9 +8,16 @@
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "XUI": ["src"],
-      "XUI/*": ["src/*", "*"]
+      "@xui/base": ["packages/base/src/index.ts"],
+      "@xui/fields": ["packages/fields/src/index.ts"],
+      "@xui/input": ["packages/input/src/index.ts"],
+      "@xui/types": ["packages/types/src/index.ts"],
+      "@xui/utils": ["packages/utils/src/index.ts"]
     }
   },
-  "include": [".dumirc.ts", ".fatherrc.ts", "src/**/*"]
+  "include": [
+    ".dumirc.ts",
+    "packages/*/src/**/*",
+    "packages/*/.fatherrc.ts"
+  ]
 }

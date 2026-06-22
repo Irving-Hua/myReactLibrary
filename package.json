@@ -1,25 +1,24 @@
 {
   "name": "XUI",
   "version": "0.0.1",
+  "private": true,
   "description": "A react library developed with dumi",
   "license": "MIT",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
+  "workspaces": [
+    "packages/*"
   ],
   "scripts": {
-    "build": "father build",
-    "build:watch": "father dev",
+    "build": "yarn workspaces foreach -Apt run build",
+    "build:watch": "yarn workspaces foreach -Api run build:watch",
     "dev": "dumi dev",
     "docs:build": "dumi build",
     "docs:preview": "dumi preview",
-    "doctor": "father doctor",
+    "doctor": "yarn workspaces foreach -Apt run doctor",
     "lint": "npm run lint:es && npm run lint:css",
-    "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
-    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+    "lint:css": "stylelint \"{packages/**,test}/**/*.{css,less}\"",
+    "lint:es": "eslint \"{packages/**,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install && dumi setup",
-    "prepublishOnly": "father doctor && npm run build",
+    "prepublishOnly": "yarn doctor && yarn build",
     "start": "npm run dev"
   },
   "commitlint": {
@@ -47,6 +46,9 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^5.14.16",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@umijs/lint": "^4.0.0",
@@ -72,7 +74,5 @@
   "authors": [
     "XiaHua huaxiariving@Gmail.com"
   ],
-  "dependencies": {
-    "type-fest": "^5.7.0"
-  }
+  "packageManager": "yarn@4.17.0"
 }

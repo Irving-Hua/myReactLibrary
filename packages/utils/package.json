@@ -1,0 +1,23 @@
+{
+  "name": "@xui/utils",
+  "version": "0.0.1",
+  "description": "Utility functions for XUI",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn run -T father build",
+    "build:watch": "yarn run -T father dev",
+    "doctor": "yarn run -T father doctor"
+  },
+  "dependencies": {
+    "@xui/types": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
