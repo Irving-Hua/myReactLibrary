@@ -15,9 +15,5 @@
       "@xui/utils": ["packages/utils/src/index.ts"]
     }
   },
-  "include": [
-    ".dumirc.ts",
-    "packages/*/src/**/*",
-    "packages/*/.fatherrc.ts"
-  ]
+  "include": [".dumirc.ts", "packages/*/src/**/*", "packages/*/.fatherrc.ts"]
 }

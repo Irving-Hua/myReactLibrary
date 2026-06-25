@@ -12,7 +12,7 @@ export type ReadonlyPoint = {
 };
 
 // TODO
-export type Mutable<T> = any;
+export type Mutable<T> = { -readonly [P in keyof T]: T[P] };
 
 /**
  * Challenge 7.2
@@ -21,4 +21,4 @@ export type Mutable<T> = any;
 export type Point = { x: number; y: number };
 
 // TODO
-export type NullableFields<T> = any;
+export type NullableFields<T> = { [K in keyof T]: T[K] | null };

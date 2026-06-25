@@ -17,3 +17,4 @@ export function challenge_13_2(shape: Shape): number {
   // TODO
   return 0;
 }
+// type MyPick<T, K extends keyof T> = { [P in K]: T[K] };

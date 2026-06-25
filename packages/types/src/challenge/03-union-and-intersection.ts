@@ -7,7 +7,7 @@
  * 定义 `StringOrNumber`，表示 string 或 number。
  */
 // TODO
-export type StringOrNumber = any;
+export type StringOrNumber = string | number;
 
 /**
  * Challenge 3.2
@@ -17,7 +17,7 @@ export type Named = { name: string };
 export type Aged = { age: number };
 
 // TODO: 定义 Person
-export type Person = any;
+export type Person = Named & Aged;
 
 /**
  * Challenge 3.3
@@ -25,5 +25,7 @@ export type Person = any;
  */
 export function challenge_3_3(value: StringOrNumber): number {
   // TODO: 用类型收窄实现
+  if (typeof value === 'string') return value.length;
+  else if (typeof value === 'number') return String(value).length;
   return 0;
 }

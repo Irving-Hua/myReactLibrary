@@ -7,13 +7,13 @@
  * 定义 RGB 元组 `[number, number, number]` 类型 `RGB`。
  */
 // TODO
-export type RGB = any;
+export type RGB = [number, number, number];
 
 /**
  * Challenge 12.2
  * 实现 `zip`，将两个同长度数组组合为 `[T, U][]`。
  */
-export function challenge_12_2<T, U>(a: T[], b: U[]): unknown {
+export function zip<T, U>(a: T[], b: U[]): [T, U][] {
   // TODO: 修正返回类型并实现（假设 a.length === b.length）
-  return [];
+  return a.map((d, index) => [d, b[index]]);
 }

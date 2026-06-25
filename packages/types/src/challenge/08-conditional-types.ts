@@ -7,11 +7,11 @@
  * 实现 `IsString<T>`：若 T extends string 则为 true，否则 false。
  */
 // TODO
-export type IsString<T> = any;
+export type IsString<T> = T extends string ? true : false;
 
 /**
  * Challenge 8.2
  * 实现 `MyNonNullable<T>`：排除 null 与 undefined（勿直接使用内置 NonNullable）。
  */
 // TODO
-export type MyNonNullable<T> = any;
+export type MyNonNullable<T> = T extends null | undefined ? never : T;

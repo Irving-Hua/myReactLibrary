@@ -10,7 +10,9 @@
  * 并实现函数体（可简化实现）。
  */
 // TODO: 添加 overload signatures
-export function challenge_9_1(kind: string, input: string): unknown {
+export function parseInput(kind: 'json', input: string): object;
+export function parseInput(kind: 'number', input: string): number;
+export function parseInput(kind: string, input: string): object | number {
   if (kind === 'json') return JSON.parse(input);
   return Number(input);
 }
